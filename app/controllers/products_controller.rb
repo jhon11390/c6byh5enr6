@@ -3,7 +3,7 @@ module Api
     class ProductsController < ApplicationController
       def index
         @products = Product.all
-        render json: { status: 'SUCCESS', message: 'loaded posts', data: @products }
+        render json: @products
       end
     
       def new
